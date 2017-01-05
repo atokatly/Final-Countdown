@@ -5,8 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-u = User.create(username:"Katee", email:"katee@katee.com", crypted_password:"katee")
-pd =  u.pitchdays.create(cohort:"Jackrabbits", size:20)
-j = Student.create(full_name:"Jen Young", phase_num: 3)
-a = Student.create(full_name:"Anthony Tokatly", phase_num: 3)
-p = s.pitches.create(title:"Ripe?", description:"pure awesome", final:true, creator_id:1)
+kt = User.create(username:"Katee", email:"katee@katee.com", crypted_password:"katee")
+
+
+pd =  kt.pitchdays.create(cohort:"Jackrabbits", size:20)
+round = pd.rounds.create(round_num:2)
+j = Student.create(full_name:"Jen Young", phase_num: 3, team_id:1)
+a = Student.create(full_name:"Anthony Tokatly", phase_num: 3, team_id:1)
+i = Student.create(full_name:"Ibraheem Abdul-Malik", phase_num: 3, team_id:2)
+kmo = Student.create(full_name:"Katie O'Neill ", phase_num: 3, team_id:2)
+p = j.pitches.create(title:"Ripe?", description:"pure awesome", final:true)
+p = i.pitches.create(title:"Caillou", description:"he's awful", final:true)
