@@ -6,7 +6,7 @@ class CreatePitches < ActiveRecord::Migration[5.0]
       t.boolean :final
       t.references :student
       t.references :pitchday
-      
+
       t.timestamps null: false
     end
   end
