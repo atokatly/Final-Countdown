@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-u = User.create(username:"Katee", email:"katee@katee.com", crypted_password:"katee")
+u = User.create(username:"Katee", email:"katee@katee.com", password_digest:"katee")
 pd =  u.pitchdays.create(cohort:"Jackrabbits", size:20)
 j = Student.create(full_name:"Jen Young", phase_num: 3)
 a = Student.create(full_name:"Anthony Tokatly", phase_num: 3)
