@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/atokatly/Final-Countdown.svg?style=svg)](https://circleci.com/gh/atokatly/Final-Countdown)
+
 ####Final Countdown####
 
 Collaborators:
