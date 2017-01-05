@@ -9,4 +9,4 @@ u = User.create(username:"Katee", email:"katee@katee.com", password_digest:"kate
 pd =  u.pitchdays.create(cohort:"Jackrabbits", size:20)
 j = Student.create(full_name:"Jen Young", phase_num: 3)
 a = Student.create(full_name:"Anthony Tokatly", phase_num: 3)
-p = s.pitches.create(title:"Ripe?", description:"pure awesome", final:true, creator_id:1)
+p = j.pitches.create(title:"Ripe?", description:"pure awesome", final:true)
