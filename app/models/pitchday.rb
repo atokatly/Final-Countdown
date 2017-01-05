@@ -1,0 +1,3 @@
+class Pitchday < ApplicationRecord
+
+end
