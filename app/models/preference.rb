@@ -1,5 +1,5 @@
 class Preference < ApplicationRecord
-  belongs_to :student
-  belongs_to :pitch
-  belongs_to :round
+  belongs_to :student, optional: true
+  belongs_to :pitch, optional: true
+  belongs_to :round, optional: true
 end
