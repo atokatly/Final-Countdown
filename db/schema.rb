@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105032840) do
+ActiveRecord::Schema.define(version: 20170105223308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,13 +39,13 @@ ActiveRecord::Schema.define(version: 20170105032840) do
   create_table "preferences", force: :cascade do |t|
     t.integer  "rank"
     t.integer  "pitch_id"
-    t.integer  "user_id"
     t.integer  "round_id"
+    t.integer  "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["pitch_id"], name: "index_preferences_on_pitch_id", using: :btree
     t.index ["round_id"], name: "index_preferences_on_round_id", using: :btree
-    t.index ["user_id"], name: "index_preferences_on_user_id", using: :btree
+    t.index ["student_id"], name: "index_preferences_on_student_id", using: :btree
   end
 
   create_table "rounds", force: :cascade do |t|
@@ -75,5 +75,5 @@ ActiveRecord::Schema.define(version: 20170105032840) do
 
   add_foreign_key "preferences", "pitches"
   add_foreign_key "preferences", "rounds"
-  add_foreign_key "preferences", "users"
+  add_foreign_key "preferences", "students"
 end
