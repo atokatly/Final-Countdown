@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: "users#index"
   resources :users
   resources :pitches
+  resources :thankyou
 
-  # Session controllers 
+  # Session controllers
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
