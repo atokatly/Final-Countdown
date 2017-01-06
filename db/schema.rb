@@ -50,9 +50,10 @@ ActiveRecord::Schema.define(version: 20170105223308) do
 
   create_table "rounds", force: :cascade do |t|
     t.integer  "round_num"
+    t.boolean  "active_round"
     t.integer  "pitchday_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["pitchday_id"], name: "index_rounds_on_pitchday_id", using: :btree
   end
 
