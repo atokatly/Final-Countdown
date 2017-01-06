@@ -1,5 +1,8 @@
 module ApplicationHelper
 
+    def current_round
+      round = Round.find_by(active_round:true)
+    end
 
     def pitch_order
       pitch_votes = {}
