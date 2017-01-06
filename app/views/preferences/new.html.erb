@@ -1,0 +1,15 @@
+<h1>Pick Your Top Pitch.</h1>
+
+<%= form_for :preference, url: '/preferences' do |f| %>
+
+    <%= f.fields_for :students do |student_form| %>
+      Full Name: <%= student_form.text_field :full_name %>
+
+    <% end %>
+    <% @pitchday.pitches.each do |pitch| %>
+      <!-- Add field for enter preference -->
+      Pitch Name: <%= pitch.title %>
+    <% end %>
+    <%= f.submit "Submit" %>
+
+<% end %>

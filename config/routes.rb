@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   resources :users
   resources :pitches
   resources :thankyou
-  resources :pitchdays
+  
+  resources :pitchdays do
+    resources :rounds do
+      resources :preferences
+    end
+  end
 
   # Session controllers
   get '/login' => 'sessions#new'
