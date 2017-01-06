@@ -1,6 +1,6 @@
 class PitchdaysController < ApplicationController
   def index
-
+    @user = current_user
   end
 
   def new
@@ -19,7 +19,7 @@ class PitchdaysController < ApplicationController
   end
 
   def show
-
+    @user = current_user
   end
 
   private
