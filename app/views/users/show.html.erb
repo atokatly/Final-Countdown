@@ -1,9 +1,12 @@
+
 <h1>Top Pitches</h1>
-<h2>Pitch Title</h2>
-<ul>
+<div class="list-group">
+<h2 class="list-group-item active">Pitch Title</h2>
+<ul class="list-group-item">
   <% @pitch_order.each do |array| %>
-    <li><%=array[0]%></li>
+    <li class="list-group-item"><%=array[0]%></li>
     <%end%>
 </ul>
 <!-- <h1>You must be logged in to view this page.</h1> -->
 <!-- <% link_to 'Log in', login_path %> -->
+</div>
