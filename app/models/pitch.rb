@@ -3,4 +3,6 @@ class Pitch < ApplicationRecord
   has_many :students
   accepts_nested_attributes_for :students
   has_many :preferences
+
+
 end
