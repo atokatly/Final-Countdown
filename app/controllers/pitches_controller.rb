@@ -16,6 +16,7 @@ class PitchesController < ApplicationController
       if @student.pitches.length >= 2
         redirect_to thankyou_index_path
       else
+        # TODO: fix notice
         redirect_to new_pitch_path, notice: "Pitch was successfully created."
       end
     end
