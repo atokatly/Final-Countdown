@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   root to: "users#index"
   resources :users
   resources :pitches
+
+  # Session controllers 
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   # get '/users/new' => 'users#new'
   # post '/users' => 'users#create'
 end
