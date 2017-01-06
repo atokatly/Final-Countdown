@@ -5,22 +5,15 @@ class PitchesController < ApplicationController
   end
 
   def create
-    p "=" * 25
-    p pitch_params
-    @pitch = Pitch.new(pitch_params)
-    @student = Student.find_or_create_by(full_name: pitch_params[:full_name])
+
+    @student = Student.find_or_create_by(full_name: params[:pitch][:students][:full_name], phase_num: params[:pitch][:students][:phase_num])
+    @pitch = @student.pitches.new(title: params[:pitch][:title], description: params[:pitch][:description])
 
     if @pitch.save
       redirect_to @pitch, notice: "Pitch was successfully created."
     else
       render :new
     end
-  end
-
-
-  private
-  def pitch_params
-    params.require(:pitch).permit(:title, :description, :final, :student)
   end
 
 end
