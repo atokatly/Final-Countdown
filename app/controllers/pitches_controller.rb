@@ -18,7 +18,11 @@ class PitchesController < ApplicationController
       else
         # TODO: fix notice
         redirect_to new_pitch_path, notice: "Pitch was successfully created."
+
       end
+    else
+      p @pitch.errors
+      render :new
     end
   end
 end
