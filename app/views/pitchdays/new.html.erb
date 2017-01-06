@@ -1,0 +1,7 @@
+<h1>Create a New Pitchday.</h1>
+
+<%= form_for :pitchday, url: '/pitchdays' do |f| %>
+    Number: <%= f.number_field :size %>
+    Cohort: <%= f.text_field :cohort %>
+    <%= f.submit "Start Round" %>
+<% end %>
