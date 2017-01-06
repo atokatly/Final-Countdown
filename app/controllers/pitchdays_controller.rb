@@ -13,6 +13,7 @@ class PitchdaysController < ApplicationController
     if @pitchday.save
       redirect_to pitchdays_path
     else
+       p @pitchday.errors
       redirect_to new_pitchday_path
     end
   end
