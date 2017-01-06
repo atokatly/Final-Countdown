@@ -18,6 +18,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @pitch_order = pitch_order
+    @pitches = Pitch.all
+    @preferences = Preference.all
+    @rounds = Round.all
+
+  end
+
   private
 
   def user_params
