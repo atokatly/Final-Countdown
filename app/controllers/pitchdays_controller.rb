@@ -8,18 +8,20 @@ class PitchdaysController < ApplicationController
   end
 
   def create
+    @old_round = current_round
+    change_current_round_status(@old_round)
     @pitchday = Pitchday.new(pitchday_params)
+    @round = @pitchday.rounds.new(round_num: round_number, active_round: true)
+    @old_round.save
+    p @round
     @pitchday.user_id = current_user.id if current_user
-    if @pitchday.save
+
+    if @pitchday.save && @round.save
       redirect_to pitchdays_path
     else
        p @pitchday.errors
       redirect_to new_pitchday_path
     end
-  end
-
-  def show
-    @user = current_user
   end
 
   private
